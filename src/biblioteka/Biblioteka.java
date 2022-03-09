@@ -9,6 +9,7 @@ public class Biblioteka implements BibliotekaInterfejs {
 	
 	private List<Knjiga> knjige = new LinkedList<Knjiga>();
 
+	//privatni komentar
 	@Override
 	public void dodajKnjigu(Knjiga knjiga) {
 		if (knjiga == null)
