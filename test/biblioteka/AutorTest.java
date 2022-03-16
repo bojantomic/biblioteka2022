@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -92,6 +93,7 @@ class AutorTest {
 	}
 	
 	@Test
+	@DisplayName("testiranje konstruktora sa dva parametra")
 	void testAutorStringString() {
 		a = new Autor("Laza", "Lazic");
 		
