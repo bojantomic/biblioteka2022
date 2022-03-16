@@ -65,10 +65,22 @@ public class Autor {
 		this.ime = ime;
 	}
 
+	/**
+	 * Vraca prezime autora
+	 * 
+	 * @return prezime autora kao String
+	 */
 	public String getPrezime() {
 		return prezime;
 	}
 
+	/**
+	 * Postavlja novu vrednost za atribut prezime
+	 * 
+	 * @param prezime novo prezime autora
+	 * @throws java.lang.NullPointerException ako je uneto prezime null
+	 * @throws java.lang.IllegalArgumentException ako je uneto prezime prazan String
+	 */
 	public void setPrezime(String prezime) {
 		if (prezime == null)
 			throw new NullPointerException("Prezime ne sme biti null");
@@ -79,6 +91,11 @@ public class Autor {
 		this.prezime = prezime;
 	}
 
+	/**
+	 * Vraca sve podatke o autoru u jednom String-u.
+	 * 
+	 * @return String sa svim podacima o autoru
+	 */
 	@Override
 	public String toString() {
 		return "Autor [ime=" + ime + ", prezime=" + prezime + "]";
