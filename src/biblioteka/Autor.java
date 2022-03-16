@@ -1,28 +1,60 @@
 package biblioteka;
 
+/**
+ * Predstavlja autora knjige.
+ * Svaki autor moze biti autor vise knjiga.
+ * @author bojantomic
+ * @version 1.0
+ *
+ */
 public class Autor {
 	
+	/**
+	 * Ime autora
+	 */
 	private String ime;
 	
+	/**
+	 * Prezime autora
+	 */
 	private String prezime;
-
-
 	
+	/**
+	 * Postavlja ime i prezime na null
+	 */
 	public Autor() {
 		ime = null;
 		prezime = null;
 	}
 
+	/**
+	 * Postavlja ime i prezime na unete vrednosti
+	 * 
+	 * @param ime novo ime autora
+	 * @param prezime novo prezime autora
+	 */
 	public Autor(String ime, String prezime) {
 		super();
 		setIme(ime);
 		setPrezime(prezime);
 	}
 
+	/**
+	 * Vraca ime autora
+	 * 
+	 * @return ime autora kao String
+	 */
 	public String getIme() {
 		return ime;
 	}
 
+	/**
+	 * Postavlja novu vrednost za atribut ime
+	 * 
+	 * @param ime novo ime autora
+	 * @throws java.lang.NullPointerException ako je uneto ime null
+	 * @throws java.lang.IllegalArgumentException ako je uneto ime prazan String
+	 */
 	public void setIme(String ime) {
 		if (ime == null)
 			throw new NullPointerException("Ime ne sme biti null");
@@ -61,6 +93,15 @@ public class Autor {
 		return result;
 	}
 
+	/**
+	 * Poredi dva autora po imenu i prezimenu
+	 * 
+	 * @return
+	 * <ul>
+	 * <li>true - ako su i ime i prezime isti kod oba autora</li>
+	 * <li>false - ako to nije slucaj</li>
+	 * </ul>
+	 */
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
