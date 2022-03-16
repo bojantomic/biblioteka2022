@@ -5,8 +5,16 @@ import java.util.List;
 
 import biblioteka.interfejs.BibliotekaInterfejs;
 
+/**
+ * Predstavlja implementaciju biblioteke sa knjigama.
+ * 
+ * Ima osnovne operacije unosa, brisanja i pretrage biblioteke.
+ */
 public class Biblioteka implements BibliotekaInterfejs {
-	//Ovo je lista sa svim knjigama u biblioteci
+	
+	/**
+	 * Lista sa svim knjigama u biblioteci. Inicijalozovana kao LinkedList
+	 */
 	private List<Knjiga> knjige = new LinkedList<Knjiga>();
 
 	@Override
