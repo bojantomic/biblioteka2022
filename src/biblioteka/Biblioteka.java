@@ -48,9 +48,38 @@ public class Biblioteka implements BibliotekaInterfejs {
 		
 		List<Knjiga> rezultat = new LinkedList<Knjiga>();
 		
-		for (Knjiga k : knjige)
-			if (k.getNaslov().toLowerCase().contains(naslov.toLowerCase()))
+		for (Knjiga k : knjige) {
+			boolean nadjeno = true;
+			
+			if (naslov!=null)
+				if (k.getNaslov() != null && k.getNaslov().toLowerCase().contains(naslov.toLowerCase()))
+					nadjeno = nadjeno && true;
+				else
+					nadjeno = false;
+			
+			
+			if (isbn > 0)
+				if (k.getIsbn() == isbn) 
+					nadjeno = nadjeno && true;
+				else
+					nadjeno = false;
+			
+			
+			if (autor != null)
+				if (k.getAutori() != null && k.getAutori().contains(autor)) 
+					nadjeno = nadjeno && true;
+				else
+					nadjeno = false;
+
+			if (izdavac!=null)
+				if (k.getIzdavac() != null && k.getIzdavac().toLowerCase().contains(izdavac.toLowerCase()))
+					nadjeno = nadjeno && true;
+				else
+					nadjeno = false;
+			
+			if (nadjeno)
 				rezultat.add(k);
+		}
 		
 		return rezultat;
 	}
